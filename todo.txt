@@ -1,0 +1,8 @@
+Database class
+   -Create this class (ugh)
+Acl Plugin
+   -Begin planning of this, think, etc.
+Auth Plugin
+   -once finished with Acl, implement a user system with it\
+Session Class
+   -Provide utility functions for sessions, and hooks to Acl etc.

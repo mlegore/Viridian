@@ -1,0 +1,69 @@
+app1			Specific Application Subdirectory
+-config			App specific configuration
+--plugins.php		Plugin Autoload Config File
+-controllers		Controllers in App
+-errors			App specific error pages
+--400.html
+--404.html
+--500.html
+-extend			App specific extensions of core
+--Loader.php
+--Model.php
+-helpers		App Helpers
+-logs			Logs used in the App
+--error.log
+--admin.log
+--posts.log
+--login.log
+-media			Media Files
+-models			Models in App
+-plugins		Application specific plugins
+-views			Views in App
+--drivers		View drivers (control rendering of templates)
+global			Files used in all apps
+-config			
+--plugins.php
+--myplugin.php
+-controllers		Global controllers, that can be used in more than one app
+-errors			Default Error pages (if none exist in app)
+--404.html
+--403.html
+--500.html
+-helpers		Global helpers
+-logs			Server/Global Logs (used by framework core mostly)
+--error.log
+--admin.log
+--access.log
+-media			Media used by all apps
+--images
+---bg.png
+--css
+---default.css
+--js
+---script.js
+-models			Models Used by all apps
+--CarModel.php
+-plugins		Installed Plugins
+--myplugin		Plugin Directory
+---plugin.php		Plugin class
+---otherfile.php	Other file(s) used by the plugin (typically one per class)
+-views			Views used by all applications
+--drivers		View Drivers
+core			Files used by the core framework
+
+Process for finding resources
+Look in app dir
+Look in global dir
+Look in core (if the file that we are looking for is a core file)
+
+Cannot be extended:
+Base
+
+
+
+
+
+http://www.example.com/  -> app1
+http://wiki.example.com/ -> app2
+http://images.example.com -> /path/to/installation/app1/media/images
+http://wiki.example.com/media -> /path/to/installation/app2/media
